@@ -1,0 +1,33 @@
+<FonAnalizEkrani>:
+    orientation: "vertical"
+    padding: dp(10)
+    spacing: dp(10)
+
+    Label:
+        text: "Fon Analiz v12 PRO"
+        font_size: "20sp"
+        size_hint_y: 0.08
+        bold: True
+        halign: "center"
+        valign: "middle"
+
+    Button:
+        text: "Analizi Şimdi Yenile"
+        size_hint_y: 0.10
+        background_color: 0.1, 0.5, 0.8, 1
+        on_press: root.analiz_baslat()
+
+    ScrollView:
+        size_hint_y: 0.82
+        effect_cls: "ScrollEffect"
+
+        Label:
+            id: sonuc_alani
+            text: root.sonuc
+            size_hint_y: None
+            height: self.texture_size[1]
+            text_size: self.width, None
+            font_size: "13sp"
+            halign: "left"
+            valign: "top"
+            markup: False
